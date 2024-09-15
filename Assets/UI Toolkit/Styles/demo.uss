@@ -1,0 +1,6 @@
+.demo {
+    min-width: 480px;
+    min-height: 640px;
+    padding: 2% 2%;
+    background-color: #212121;
+}
