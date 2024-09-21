@@ -391,7 +391,8 @@ MonoBehaviour:
     TypeName: 
   autoRun: 1
   autoInjectGameObjects: []
-  _documentRoot: {fileID: 1492515219}
+  _documentRoot: {fileID: 1492515220}
+  <myFloatValue>k__BackingField: 0
 --- !u!4 &1497450741
 Transform:
   m_ObjectHideFlags: 0

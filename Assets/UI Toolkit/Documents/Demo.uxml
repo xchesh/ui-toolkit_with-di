@@ -1,7 +1,9 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/Styles/demo.uss?fileID=7433441132597879392&amp;guid=156635c5761f57d4aa4f85ff6d5d3825&amp;type=3#demo" />
     <engine:VisualElement name="Demo" class="demo" style="flex-grow: 1;">
-        <AdsButton_1 text="Ads button which has no resolved dependencies" />
-        <AdsButton_2 text="Ads button with resolving dependencies by VContainer" />
+        <AdsButton_1 text="Ads button which has no resolved dependencies" name="AdsButton_1-0" />
+        <AdsButton_2 text="Ads button with resolving dependencies by VContainer" name="AdsButton_2-0" />
+        <AdsButton_2 text="Ads button with resolving dependencies by VContainer" name="AdsButton_2-1" />
+        <AdsButton_2 text="Ads button with resolving dependencies by VContainer" name="AdsButton_2-2" />
     </engine:VisualElement>
 </engine:UXML>
