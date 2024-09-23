@@ -1,9 +1,20 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/Styles/demo.uss?fileID=7433441132597879392&amp;guid=156635c5761f57d4aa4f85ff6d5d3825&amp;type=3#demo" />
     <engine:VisualElement name="Demo" class="demo" style="flex-grow: 1;">
-        <AdsButton_1 text="Ads button which has no resolved dependencies" name="AdsButton_1-0" />
-        <AdsButton_2 text="Ads button with resolving dependencies by VContainer" name="AdsButton_2-0" />
-        <AdsButton_2 text="Ads button with resolving dependencies by VContainer" name="AdsButton_2-1" />
-        <AdsButton_2 text="Ads button with resolving dependencies by VContainer" name="AdsButton_2-2" />
+        <AdsButton_1 text="Ads button which has no resolved dependencies" name="AdsButton_1-0">
+            <Bindings>
+                <UnityEngine.Localization.LocalizedString property="text" table="GUID:72c62039fe51d54488b96be6759bdb5b" entry="Id(23939944448)" />
+            </Bindings>
+        </AdsButton_1>
+        <AdsButton_2 text="Ads button with resolving dependencies by VContainer" name="AdsButton_2-0">
+            <Bindings>
+                <engine:DataBinding property="Resolver" data-source-path="Resolver" binding-mode="ToTargetOnce" />
+            </Bindings>
+        </AdsButton_2>
+        <AdsButton_3 text="Ads button with resolving dependencies by VContainer" name="AdsButton_3-0">
+            <Bindings>
+                <DataSourceResolverBinding property="AdsService" type="IAdsService, Assembly-CSharp" binding-mode="ToTargetOnce" />
+            </Bindings>
+        </AdsButton_3>
     </engine:VisualElement>
 </engine:UXML>

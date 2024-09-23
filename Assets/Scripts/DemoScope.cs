@@ -10,18 +10,13 @@ public class DemoScope : LifetimeScope
 
     protected override void Configure(IContainerBuilder builder)
     {
-        builder.Register<DataSource>(Lifetime.Singleton);
         builder.Register<AdsService>(Lifetime.Singleton).As<IAdsService>();
-        builder.Register<ComponentResolver>(Lifetime.Singleton).As<IComponentResolver>();
 
-        // Transient registration - new instance every time
-        builder.Register<AdsButton_2>(Lifetime.Transient);
+        builder.Register<DataSource>(Lifetime.Singleton);
+        builder.Register<DataSourceResolver>(Lifetime.Singleton).As<IDataSourceResolver>();
 
         builder.RegisterBuildCallback(container =>
         {
-            // Enable the document root
-            // This is a temporary solution to show the UI
-            _documentRoot.gameObject.SetActive(true);
             _documentRoot.rootVisualElement.dataSource = container.Resolve<DataSource>();
         });
     }
